@@ -2,7 +2,6 @@ package com.shandilya.controllers;
 
 import com.shandilya.services.GreetAnimalService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Controller;
 
 /**
@@ -26,7 +25,7 @@ public class QualifierDemoController {
     }*/
 
     @Autowired
-    public QualifierDemoController(@Qualifier("greetDog") GreetAnimalService greetAnimalService) {
+    public QualifierDemoController(GreetAnimalService greetAnimalService) {
         this.greetAnimalService = greetAnimalService;
     }
 
